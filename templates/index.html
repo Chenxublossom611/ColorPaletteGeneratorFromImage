@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title> Image color palette generator| Flask </title>
+</head>
+<body>
+    <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1541367777708-7905fe3296c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI2fHxjb2xvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')">
+    <div class="box">
+    <h1 class="heading">Color palette generator from image</h1>
+    <form action = "{{ url_for('result') }}" method = "POST" enctype = "multipart/form-data">
+        <!-- <input type = "file" class="file_input" name = "file" /> -->
+        <div class="input-file-container">
+            <input class="input-file" id="my-file" type="file" name="file" >
+            <!-- <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label> -->
+        </div>
+        <input type = "submit" class="submit_button"/>
+
+    </form>
+    </div>
+    </header>
+
+    <footer>
+        <div><p>Made in Warsaw by Yaoyao, Summer of 2022</p></div>
+    </footer>
+</body>
+</html>
